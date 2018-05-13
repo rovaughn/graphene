@@ -5,7 +5,7 @@ from graphql.language.ast import (BooleanValue, FloatValue, IntValue,
 
 from .base import BaseOptions, BaseType
 from .unmountedtype import UnmountedType
-
+from typing import Optional
 
 class ScalarOptions(BaseOptions):
     pass
@@ -85,7 +85,7 @@ class Float(Scalar):
     '''
 
     @staticmethod
-    def coerce_float(value):
+    def coerce_float(value) -> Optional[float]:
         # type: (Any) -> float
         try:
             return float(value)

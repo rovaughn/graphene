@@ -82,3 +82,7 @@ target/
 *.sqlite3
 .vscode
 .mypy_cache
+
+# Pyre
+.pyre
+.pyre_configuration
